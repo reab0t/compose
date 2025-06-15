@@ -140,34 +140,4 @@ cd <repository-name>
 docker-compose up --build
 ```
 
-3. Access the applications:
-- Personal Website: http://localhost:80
-- Todo App: http://localhost:3000
 
-## Deployment
-
-The applications can be deployed using GitHub Actions. The workflow will:
-1. Build Docker images
-2. Push them to DockerHub
-3. Deploy to your server
-
-### Required Secrets
-
-Set up the following secrets in your GitHub repository:
-- `DOCKERHUB_USERNAME`: Your DockerHub username
-- `DOCKERHUB_TOKEN`: Your DockerHub access token
-- `SERVER_HOST`: Your server's hostname or IP
-- `SERVER_USERNAME`: SSH username for your server
-- `SERVER_SSH_KEY`: SSH private key for authentication
-
-## Customization
-
-### Personal Website
-Edit the `personal-website/src/index.html` file to customize your personal website.
-
-### Todo App
-The todo app can be customized by modifying the files in `todo-app/src/`.
-
-## License
-
-MIT
