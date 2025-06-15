@@ -1,0 +1,18 @@
+services:
+  personal-website:
+    build: ./personal-website
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  todo-app:
+    build: ./todo-app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 

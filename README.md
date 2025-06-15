@@ -84,3 +84,83 @@ Legacy
 -------------
 
 The Python version of Compose is available under the `v1` [branch](https://github.com/docker/compose/tree/v1).
+
+# Personal Website and Todo App
+
+This repository contains two applications:
+1. A personal website
+2. A todo application
+
+Both applications are containerized using Docker and can be deployed together using Docker Compose.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+- Node.js (for local development)
+
+## Project Structure
+
+```
+.
+├── personal-website/
+│   ├── src/
+│   │   └── index.html
+│   └── Dockerfile
+├── todo-app/
+│   ├── src/
+│   │   ├── app.js
+│   │   ├── package.json
+│   │   └── public/
+│   │       └── index.html
+│   └── Dockerfile
+├── docker-compose.yml
+└── .github/
+    └── workflows/
+        └── deploy.yml
+```
+
+## Running Locally
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <repository-name>
+```
+
+2. Start the applications using Docker Compose:
+```bash
+docker-compose up --build
+```
+
+3. Access the applications:
+- Personal Website: http://localhost:80
+- Todo App: http://localhost:3000
+
+## Deployment
+
+The applications can be deployed using GitHub Actions. The workflow will:
+1. Build Docker images
+2. Push them to DockerHub
+3. Deploy to your server
+
+### Required Secrets
+
+Set up the following secrets in your GitHub repository:
+- `DOCKERHUB_USERNAME`: Your DockerHub username
+- `DOCKERHUB_TOKEN`: Your DockerHub access token
+- `SERVER_HOST`: Your server's hostname or IP
+- `SERVER_USERNAME`: SSH username for your server
+- `SERVER_SSH_KEY`: SSH private key for authentication
+
+## Customization
+
+### Personal Website
+Edit the `personal-website/src/index.html` file to customize your personal website.
+
+### Todo App
+The todo app can be customized by modifying the files in `todo-app/src/`.
+
+## License
+
+MIT
