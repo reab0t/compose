@@ -85,6 +85,13 @@ Legacy
 
 The Python version of Compose is available under the `v1` [branch](https://github.com/docker/compose/tree/v1).
 
+# 个人信息
+
+- 姓名：靳磊
+- 学号：20222102
+
+![profile](personal-website/src/profile.jpg)
+
 # Personal Website and Todo App
 
 This repository contains two applications:
